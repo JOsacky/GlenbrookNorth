@@ -41,13 +41,14 @@ public class Schedules extends Activity {
 	    
 	    Button emailButton = (Button) findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
-		
+        	
 			@Override
 			public void onClick(View r) {
 				onEmail();
 			}
 
 			private void onEmail() {
+				onSave(null);
 				Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
 		        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "My GBN Schedule");
@@ -91,6 +92,14 @@ public class Schedules extends Activity {
 	   fourthBlock = (EditText) findViewById(R.id.editText4);
 	   fourthBlock.setText(fourthString);
 	   
+	}
+	
+	@Override
+	protected void onPause()
+	{
+		super.onPause();
+		
+		onSave(null);
 	}
 	@Override  
 	public boolean onCreateOptionsMenu(Menu menu) {  
