@@ -20,14 +20,27 @@ public class Schedules extends Activity {
 	private EditText thirdBlock;
 	private EditText fourthBlock;
 	
+	private String firstString;
+	private String secondString;
+	private String thirdString;
+	private String fourthString;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.schedulea);
 		
-		Button saveButton = (Button) findViewById(R.id.saveButton);
-        saveButton.setOnClickListener(new View.OnClickListener() {
+		prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		
+		Spinner spinner = (Spinner) findViewById(R.id.spinner_lunch);
+	    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+	            this, R.array.lunch_array, android.R.layout.simple_spinner_item);
+	    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+	    spinner.setAdapter(adapter);
+	    
+	    Button emailButton = (Button) findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
 		
 			@Override
 			public void onClick(View r) {
@@ -38,37 +51,46 @@ public class Schedules extends Activity {
 				Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
 		        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "My GBN Schedule");
-
 		        emailIntent.setType("plain/text");
-		        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, "");
+		        
+		        StringBuilder sb = new StringBuilder();
+		        sb.append("2/3A");
+		        sb.append(firstString);
+		        sb.append("\n4/5A");
+		        sb.append(secondString);
+		        sb.append("\n6/7A");
+		        sb.append(thirdString);
+		        sb.append("\n8/9A");
+		        sb.append(fourthString);
+		        
+		        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, sb.toString());
 
 		        startActivity(emailIntent);
 				
 			}
 		});
 		
-        
-		prefs = PreferenceManager.getDefaultSharedPreferences(this);
-		
-		String firstString = prefs.getString("firstblock", "");
-		String secondString = prefs.getString("secondblock", "");
-		String thirdString = prefs.getString("thirdblock", "");
-		String fourthString = prefs.getString("fourthblock", "");
-		
-		Spinner spinner = (Spinner) findViewById(R.id.spinner_lunch);
-	    ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-	            this, R.array.lunch_array, android.R.layout.simple_spinner_item);
-	    adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-	    spinner.setAdapter(adapter);
-	    
-	    firstBlock = (EditText) findViewById(R.id.editText1);
-	    firstBlock.setText(firstString);
-	    secondBlock = (EditText) findViewById(R.id.editText2);
-	    secondBlock.setText(secondString);
-	    thirdBlock = (EditText) findViewById(R.id.editText3);
-	    thirdBlock.setText(thirdString);
-	    fourthBlock = (EditText) findViewById(R.id.editText4);
-	    fourthBlock.setText(fourthString);
+	}
+	
+	@Override
+	protected void onResume()
+	{
+	   super.onResume();
+	   
+	   firstString = prefs.getString("firstblock", "");
+	   secondString = prefs.getString("secondblock", "");
+	   thirdString = prefs.getString("thirdblock", "");
+	   fourthString = prefs.getString("fourthblock", "");
+	   
+	   firstBlock = (EditText) findViewById(R.id.editText1);
+	   firstBlock.setText(firstString);
+	   secondBlock = (EditText) findViewById(R.id.editText2);
+	   secondBlock.setText(secondString);
+	   thirdBlock = (EditText) findViewById(R.id.editText3);
+	   thirdBlock.setText(thirdString);
+	   fourthBlock = (EditText) findViewById(R.id.editText4);
+	   fourthBlock.setText(fourthString);
+	   
 	}
 	@Override  
 	public boolean onCreateOptionsMenu(Menu menu) {  
@@ -78,12 +100,12 @@ public class Schedules extends Activity {
 	
 	
 	//call this when the save button is hit
-	private void onSave(){
+	public void onSave(View v){
 		Editor edit = prefs.edit();
-		String firstString = firstBlock.getText().toString();
-		String secondString = secondBlock.getText().toString();
-		String thirdString = thirdBlock.getText().toString();
-		String fourthString = fourthBlock.getText().toString();
+		firstString = firstBlock.getText().toString();
+		secondString = secondBlock.getText().toString();
+		thirdString = thirdBlock.getText().toString();
+		fourthString = fourthBlock.getText().toString();
 		
 		edit.putString("firstBlock", firstString);
 		edit.putString("secondBlock", secondString);
@@ -95,19 +117,7 @@ public class Schedules extends Activity {
 		edit.commit();
 	
 	}
-	protected void onResume()
-	{
-	   super.onResume();
-
-	   	firstBlock = (EditText) findViewById(R.id.editText1);
-	    firstBlock.setText(firstString);
-	    secondBlock = (EditText) findViewById(R.id.editText2);
-	    secondBlock.setText(secondString);
-	    thirdBlock = (EditText) findViewById(R.id.editText3);
-	    thirdBlock.setText(thirdString);
-	    fourthBlock = (EditText) findViewById(R.id.editText4);
-	    fourthBlock.setText(fourthString);
-	   
-	}
+	
+	
 
 }

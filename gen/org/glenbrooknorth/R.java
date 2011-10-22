@@ -19,28 +19,30 @@ public final class R {
         public static final int icon=0x7f020002;
     }
     public static final class id {
-        public static final int editText1=0x7f060007;
-        public static final int editText2=0x7f060009;
-        public static final int editText3=0x7f06000c;
-        public static final int editText4=0x7f06000e;
-        public static final int emailButton=0x7f060011;
+        public static final int editText1=0x7f060009;
+        public static final int editText2=0x7f06000b;
+        public static final int editText3=0x7f06000e;
+        public static final int editText4=0x7f060010;
+        public static final int emailButton=0x7f060013;
         public static final int gallery1=0x7f060000;
-        public static final int gbnpage_button=0x7f060013;
-        public static final int homelogic_button=0x7f060012;
+        public static final int gbnpage_button=0x7f060015;
+        public static final int homelogic_button=0x7f060014;
         public static final int imageButton1=0x7f060001;
         public static final int imageView=0x7f060005;
-        public static final int linearLayout1=0x7f06000f;
+        public static final int linearLayout1=0x7f060011;
+        public static final int linearLayout2=0x7f060007;
         public static final int map_button=0x7f060003;
-        public static final int moodle_button=0x7f060014;
-        public static final int saveButton=0x7f060010;
+        public static final int moodle_button=0x7f060016;
+        public static final int saveButton=0x7f060012;
         public static final int schedules_button=0x7f060004;
+        public static final int scrollView1=0x7f060006;
         public static final int sites_button=0x7f060002;
-        public static final int spinner_lunch=0x7f06000b;
-        public static final int textView_23=0x7f060006;
-        public static final int textView_45=0x7f060008;
-        public static final int textView_67=0x7f06000a;
-        public static final int textView_89=0x7f06000d;
-        public static final int webassign_button=0x7f060015;
+        public static final int spinner_lunch=0x7f06000d;
+        public static final int textView_23=0x7f060008;
+        public static final int textView_45=0x7f06000a;
+        public static final int textView_67=0x7f06000c;
+        public static final int textView_89=0x7f06000f;
+        public static final int webassign_button=0x7f060017;
     }
     public static final class layout {
         public static final int main=0x7f030000;

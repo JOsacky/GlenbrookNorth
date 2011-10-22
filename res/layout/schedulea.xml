@@ -1,60 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical" android:layout_width="match_parent"
-	android:layout_height="match_parent" android:weightSum="1">
-	<TextView android:layout_height="wrap_content" android:text="2-3A 7:40-9:13"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:id="@+id/textView_23"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
-		android:layout_width="match_parent">
-		<requestFocus></requestFocus>
-	</EditText>
-	<TextView android:layout_height="wrap_content" android:text="4-5A 9:23-10:53"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:id="@+id/textView_45"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/editText2"
-		android:layout_width="match_parent"></EditText>
-	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:text="6-7A 11:00-1:15" android:id="@+id/textView_67"></TextView>
-	<Spinner android:layout_width="match_parent"
-		android:layout_height="wrap_content" android:prompt="@string/lunch"
-		android:id="@+id/spinner_lunch"></Spinner>
-	<EditText android:id="@+id/editText3" android:layout_width="match_parent"
-		android:layout_height="wrap_content"></EditText>
-	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:id="@+id/textView_89" android:text="8-9A 1:25-2:55"></TextView>
-	<EditText android:id="@+id/editText4" android:layout_width="match_parent"
-		android:layout_height="wrap_content"></EditText>
-	<TextView android:layout_height="wrap_content" android:text="2-3B 7:40-9:13"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:id="@+id/textView_23"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
-		android:layout_width="match_parent">
-		<requestFocus></requestFocus>
-	</EditText>
-	<TextView android:layout_height="wrap_content" android:text="4-5B 9:23-10:53"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:id="@+id/textView_45"></TextView>
-	<EditText android:layout_height="wrap_content" android:id="@+id/editText2"
-		android:layout_width="match_parent"></EditText>
-	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:text="6-7B 11:00-1:15" android:id="@+id/textView_67"></TextView>
-	<Spinner android:layout_width="match_parent"
-		android:layout_height="wrap_content" android:prompt="@string/lunch"
-		android:id="@+id/spinner_lunch"></Spinner>
-	<EditText android:id="@+id/editText3" android:layout_width="match_parent"
-		android:layout_height="wrap_content"></EditText>
-	<TextView android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:id="@+id/textView_89" android:text="8-9B 1:25-2:55"></TextView>
-	<EditText android:id="@+id/editText4" android:layout_width="match_parent"
-		android:layout_height="wrap_content"></EditText>
-	<LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent" android:weightSum="1">
-		<Button android:layout_weight="0.5" android:id="@+id/saveButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save"></Button>
-		<Button android:layout_weight="0.5" android:id="@+id/emailButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Schedule"></Button>
-	</LinearLayout>
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:weightSum="1">
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            
+            <TextView android:layout_height="wrap_content" android:text="2-3A 7:40-9:13"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:id="@+id/textView_23"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+				android:layout_width="match_parent">
+				<requestFocus></requestFocus>
+			</EditText>
+			<TextView android:layout_height="wrap_content" android:text="4-5A 9:23-10:53"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:id="@+id/textView_45"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/editText2"
+				android:layout_width="match_parent"></EditText>
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="6-7A 11:00-1:15" android:id="@+id/textView_67"></TextView>
+			<Spinner android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:prompt="@string/lunch"
+				android:id="@+id/spinner_lunch"></Spinner>
+			<EditText android:id="@+id/editText3" android:layout_width="match_parent"
+				android:layout_height="wrap_content"></EditText>
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:id="@+id/textView_89" android:text="8-9A 1:25-2:55"></TextView>
+			<EditText android:id="@+id/editText4" android:layout_width="match_parent"
+				android:layout_height="wrap_content"></EditText>
+			<TextView android:layout_height="wrap_content" android:text="2-3B 7:40-9:13"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:id="@+id/textView_23"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/editText1"
+				android:layout_width="match_parent">
+				<requestFocus></requestFocus>
+			</EditText>
+			<TextView android:layout_height="wrap_content" android:text="4-5B 9:23-10:53"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:id="@+id/textView_45"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/editText2"
+				android:layout_width="match_parent"></EditText>
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:text="6-7B 11:00-1:15" android:id="@+id/textView_67"></TextView>
+			<Spinner android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:prompt="@string/lunch"
+				android:id="@+id/spinner_lunch"></Spinner>
+			<EditText android:id="@+id/editText3" android:layout_width="match_parent"
+				android:layout_height="wrap_content"></EditText>
+			<TextView android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:id="@+id/textView_89" android:text="8-9B 1:25-2:55"></TextView>
+			<EditText android:id="@+id/editText4" android:layout_width="match_parent"
+				android:layout_height="wrap_content"></EditText>
+			<LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:layout_width="match_parent" android:weightSum="1"
+			    android:orientation="horizontal">
+				<Button android:layout_weight="0.5"
+				    android:id="@+id/saveButton"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="Save"
+				    android:onClick="onSave">
+				</Button>
+				<Button android:layout_weight="0.5" android:id="@+id/emailButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email Schedule"></Button>
+			</LinearLayout>
+		            
+		</LinearLayout>
+	</ScrollView>
+
+	
 </LinearLayout>
