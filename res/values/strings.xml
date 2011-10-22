@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Glenbrook North</string>
+    <string name="app_name">GlenbrookNorth</string>
+    <string name="map">GBN Map</string>
+    <string name="schedules">Your Schedule</string><string name="sites">GBN Resources</string>
+    <string name="moodle">Moodle</string>
+    <string name="homelogic">Home Logic</string>
+    <string name="gbnpage">GBN Page</string>
+    <string name="lunch">Lunch</string>
+    <string-array name="lunch_array">
+     	<item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string name="webassign">WebAssign</string>
+    <string name="B">B Day</string>
+    <string name="A">A Day</string> 
+</resources>

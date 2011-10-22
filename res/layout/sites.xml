@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center"
+	android:padding="30dip">
+	<Button
+		android:id="@+id/homelogic_button"
+		android:text="@string/homelogic"
+		android:padding="30dip" android:layout_height="wrap_content"
+		android:layout_width="fill_parent"></Button>
+	<Button android:layout_height="wrap_content" android:text="@string/gbnpage"
+		android:id="@+id/gbnpage_button" android:padding="30dip"
+		android:layout_width="fill_parent"></Button>
+	<Button android:layout_height="wrap_content" android:text="@string/moodle"
+		android:id="@+id/moodle_button" android:padding="30dip"
+		android:layout_width="fill_parent"></Button>
+	<Button android:layout_height="wrap_content" android:text="@string/webassign"
+		android:id="@+id/webassign_button" android:padding="30dip"
+		android:layout_width="fill_parent"></Button>
+
+</LinearLayout>
